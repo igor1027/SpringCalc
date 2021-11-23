@@ -119,7 +119,7 @@ public class Application {
 
             Operation newOperation = new Operation(user.getId(),String.valueOf(num1),String.valueOf(num2),String.valueOf(result),
                     operation);
-            operationStorage.saveOperation(newOperation);
+            calculatorService.saveOperation(newOperation);
             writer.messageInConsole(num1 + " " + operation + " " + num2 + " = " + result);
             writer.messageInConsole("Если хотите продолжить, введите '1', если нет, введите '0' ");
             exit = rider.checkValue();
@@ -131,7 +131,7 @@ public class Application {
     }
 
     private void historyOperation(){
-        operationStorage.showOperationUser(user.getId());
+        calculatorService.showOperation(user.getId());
         personalMenu();
     }
 }

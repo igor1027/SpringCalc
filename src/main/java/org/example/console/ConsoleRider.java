@@ -23,22 +23,20 @@ public class ConsoleRider {
     }
 
     public String choiceOfOperation(){
-        String getOperation;
-        String operation = null;
+        String operation;
         while (true){
             while (!scanner.hasNext()){
                 writer.messageInConsole("Вы ввели значение не того типа");
                 scanner.next();
             }
-            getOperation = scanner.nextLine();
-            if(getOperation.equals("+") && getOperation.equals("-") && getOperation.equals("*") && getOperation.equals("/")){
-                operation = getOperation;
+            operation = scanner.next();
+            if(operation.equals("+") || operation.equals("-") || operation.equals("*") || operation.equals("/")){
+                return  operation;
             }else {
                 writer.messageInConsole("Неверный выбор операции");
                 scanner.next();
                 choiceOfOperation();
             }
-            return operation;
         }
     }
 

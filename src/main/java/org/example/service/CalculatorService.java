@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.entity.Operation;
 import org.example.storage.OperationStorage;
 import org.springframework.stereotype.Component;
 
@@ -48,5 +49,9 @@ public class CalculatorService {
 
     public void showOperation(int userId){
         storage.showOperationUser(userId);
+    }
+
+    public void saveOperation(Operation operation){
+        storage.saveOperation(operation);
     }
 }

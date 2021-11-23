@@ -29,7 +29,7 @@ public class OperationStorage {
                 userList.add(list);
             }
         }
-        return null;
+        return userList;
     }
 
     public void showOperationUser(int userId){
